@@ -25,10 +25,13 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  let mutatedObject = obj;
 
-  for (let keyValue in obj) {
-    return keyValue.trim();
+  for (let key in obj) {
+    mutatedObject[key] = obj[key].trim();
   }
+
+  return mutatedObject;
 }
 
 /**
@@ -41,6 +44,8 @@ function trimPropertiesMutation(obj) {
  */
 function findLargestInteger(integers) {
   // ✨ implement
+  const largestNumber = Math.max(...integers.map((obj) => obj.integer));
+  return largestNumber;
 }
 
 class Counter {
